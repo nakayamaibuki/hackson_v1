@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <!-- 文字コードを「utf-8」にしてください -->
-        <meta charset="utf-8">
-        
-        <!-- タイトルを「Progate」にしてください -->
-        <title>面接シミュレーター</title>
-        
-    </header>
-    <body>
-        <%# <h1>タイトル</h1> %>
-        <%# <button class="> %>
-        <div style="text-align: center">
-            <%# <img src="/scean_1.jpg" class="maingamen"> %>
-            <p class="title">面接シミュレーター</p>
-        </div> 
-        <div style="text-align: center">
-            <button type="button" class = "start">はじめから</button>
+<head>
+  <title>ゲームスタート</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+</head>
+<body>
+  <div id="start-screen">
+    <h1>面接シミュレータ</h1>
+    <img src="/woman1.jpg" alt="スタート画像">
+    <button id="start-button">スタート</button>
+  </div>
+  <div id="game-screen" style="display:none;">
+    <!-- ゲームの内容をここに記載 -->
+    <div class="game-container">
+        <img src="/sea.jpg" alt="ゲーム画像" class="game-image" id="game-image">
+        <div class="text-box">
+            <p>ここにゲームの説明を記載します。</p>
         </div>
-    </body>
+        <input type="text" id="answer" placeholder="回答を入力してください">
+        <button id="end-button">ゴール</button>
+    </div>
+  </div>
+
+  <div id="game-result-screen" style="display:none;">
+    <h2>ゲーム結果</h2>
+    <p>結果の内容をここに記載します。</p>
+  </div>
+
+  <script>
+    document.getElementById('start-button').addEventListener('click', function() {
+      document.getElementById('start-screen').style.display = 'none';
+      document.getElementById('game-screen').style.display = 'block';
+    });
+
+    document.getElementById('end-button').addEventListener('click', function() {
+      document.getElementById('game-screen').style.display = 'none';
+      document.getElementById('game-result-screen').style.display = 'block';
+    });
+
+    document.getElementById('answer').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            var randomNumber = Math.floor(Math.random() * 4);
+            var images = ['angry.jpg', 'smile.jpg', 'confuse.jpg', 'normal.jpg'];
+            var resultImage = document.getElementById('game-image');
+            resultImage.src = '/' + images[randomNumber];
+        }
+    });
+  </script>
+</body>
 </html>

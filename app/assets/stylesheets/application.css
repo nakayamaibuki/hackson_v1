@@ -25,3 +25,35 @@ div {
   top: 125px;
   left: 500px;
 }
+
+#start-screen, #game-screen, #game-result-screen {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#start-button, #end-button {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.game-container {
+  position: relative;
+  display: inline-block;
+}
+
+.game-image {
+  width: 100%;
+  max-width: 600px;
+}
+
+.text-box {
+  position: absolute;
+  top: 75%; /* 画像の下部に配置 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
