@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html>
-    <header>
-        <!-- 文字コードを「utf-8」にしてください -->
-        <meta charset="utf-8">
-        
-        <!-- タイトルを「Progate」にしてください -->
-        <title>面接シミュレーター</title>
-        
-    </header>
-    <body>
-        <%# <h1>タイトル</h1> %>
-        <%# <button class="> %>
-        <div style="text-align: center">
-            <%# <img src="/scean_1.jpg" class="maingamen"> %>
-            <p class="title">面接シミュレーター</p>
-        </div> 
-        <div style="text-align: center">
-            <button type="button" class = "start">はじめから</button>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テキスト入力画面</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="/scean_1.png" alt="ドア" class="background-image">
+            <div class="message-window">
+                <input type="text" id="message-input" placeholder="メッセージを入力してください">
+                <div class="message-box">メッセージウィンドウ</div>
+            </div>
         </div>
-    </body>
+    </div>
+    <div class="footer">
+        テキスト入力画面
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>

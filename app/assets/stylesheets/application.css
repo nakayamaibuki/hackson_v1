@@ -1,27 +1,68 @@
-body {
-  font-family: "Avenir Next";
-  }
+/* styles.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
 
-div {
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.image-container {
   position: relative;
-  background-image: url();
+  width: 60%;
+  height: 70%;
+  background-color: white;
+  border: 1px solid #ccc;
+  overflow: hidden;
 }
 
-.maingamen{
-  width: 512px;
-  height: 512px;
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.start{
-  width: 300px;
-  padding: 10px;
-}
-
-.title{
-  width: 500px;
-  font-size: 45px;
-  color: #ffa500;
+.message-window {
   position: absolute;
-  top: 125px;
-  left: 500px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#message-input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.message-box {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ddd;
+  width: 100%;
 }
