@@ -1,69 +1,38 @@
 /* styles.css */
-body, html{
+body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-}
-
-.background {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 75%;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: Arial, sans-serif;
 }
 
 .canvas-wrapper {
     position: relative;
+    width: 80vw;
+    height: 45vw; /* 16:9 の比率 */
+    max-width: 1280px;
+    max-height: 720px;
 }
 
 .canvas-wrapper canvas {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
 }
-
-/* .container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    position: relative;
-} */
-
-/* #myCanvas {
-    width: 60%;
-    height: 70%;
-    border: 1px solid #ccc;
-    background-color: white;
-} */
-
-/* .message-window {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-} */
 
 #message-input {
     position: absolute;
-    top: 618px; /* 任意の位置に配置 */
-    left: 60px; /* 任意の位置に配置 */
-    width: 1200px;
-    height: 116px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 50px;
     font-size: 16px;
     z-index: 10; /* canvasの上に表示 */
     background: rgba(255, 255, 255, 0.8); /* 背景色を半透明に */
@@ -71,34 +40,3 @@ body, html{
     padding: 10px;
     box-sizing: border-box;
 }
-
-/* input {
-    position: absolute;
-    top: 618px;
-    left: 60px; 
-    z-index: 10; 
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    padding: 10px;
-    box-sizing: border-box;
-} */
-
-#InputWindowCanvas {
-    position: absolute;
-    top: 618px;
-    left: 60px;
-}
-
-/* .message-box {
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-} */
-/* 
- .footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #ddd;
-    width: 100%;
-} */
